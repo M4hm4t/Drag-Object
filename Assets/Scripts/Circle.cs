@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hexagon : MonoBehaviour
+public class Circle : MonoBehaviour
 {
     [SerializeField]
-    private Transform hexagonPlace;
+    private Transform circlePlace;
     private Vector2 initialPosion;
     private Vector2 mousePosition;
     private float deltaX, deltaY;
@@ -35,10 +35,10 @@ public class Hexagon : MonoBehaviour
     }
     private void OnMouseUp()
     {
-        if (Mathf.Abs(transform.position.x - hexagonPlace.position.x) <= 0.5f &&
-                         Mathf.Abs(transform.position.y - hexagonPlace.position.y) <= 0.5f)
+        if (Mathf.Abs(transform.position.x - circlePlace.position.x) <= 0.5f &&
+                         Mathf.Abs(transform.position.y - circlePlace.position.y) <= 0.5f)
         {
-            transform.position = new Vector2(hexagonPlace.position.x, hexagonPlace.position.y);
+            transform.position = new Vector2(circlePlace.position.x, circlePlace.position.y);
             locked = true;
         }
         else
